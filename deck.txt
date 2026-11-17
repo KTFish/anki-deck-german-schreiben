@@ -1,0 +1,6 @@
+#separator:tab
+#html:true
+#guid column:1
+#notetype:Cloze
+#deck:german-generated::german-schreiben
+#tags column:4
