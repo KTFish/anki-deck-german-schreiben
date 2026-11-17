@@ -1,0 +1,41 @@
+name: Release Deck
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'deck.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Calculate Next Version
+        id: version
+        run: |
+          LATEST=$(git tag -l "v*" --sort=-v:refname | head -n 1)
+          if [ -z "$LATEST" ]; then
+            NEXT="v0.1.0"
+          else
+            VERSION=${LATEST#v}
+            MAJOR=$(echo "$VERSION" | cut -d. -f1)
+            MINOR=$(echo "$VERSION" | cut -d. -f2)
+            NEXT="v${MAJOR}.$((MINOR + 1)).0"
+          fi
+          echo "tag=$NEXT" >> $GITHUB_OUTPUT
+          echo "Next release version: $NEXT"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.version.outputs.tag }}" deck.txt \
+            --title "${{ steps.version.outputs.tag }}" \
+            --generate-notes
