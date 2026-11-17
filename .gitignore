@@ -5,3 +5,17 @@ __pycache__/
 .venv/
 unseen-candidates.json
 draft-cards.json
+
+# APM dependencies
+apm_modules/
+
+# Per harness primitives
+.agents/
+.gemini/
+.github/agents/
+.github/instructions/
+.claude/
+.cursor/
+
+AGENTS.md
+CLAUDE.md

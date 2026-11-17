@@ -1,0 +1,12 @@
+name: anki-deck-german-schreiben
+version: 1.0.0
+description: APM project for anki-deck-german-schreiben
+author: Jan Karaś
+targets:
+  - antigravity
+dependencies:
+  apm:
+    - KTFish/german-schreiben-flashcards#v0.1.0
+  mcp: []
+includes: auto
+scripts: {}

@@ -1,0 +1,80 @@
+lockfile_version: '1'
+apm_version: 0.35.1
+dependencies:
+- repo_url: ktfish/german-schreiben-flashcards
+  materialization_repo_url: KTFish/german-schreiben-flashcards
+  name: german-schreiben-flashcards
+  host: github.com
+  resolved_commit: 34d67afc9bca3fcb7cc9041e341950d864e50bc4
+  resolved_ref: v0.1.0
+  version: 0.1.0
+  package_type: apm_package
+  deployed_files:
+  - .agents/skills/german-schreiben-flashcards
+  - .agents/skills/german-schreiben-flashcards/SKILL.md
+  - .agents/skills/german-schreiben-flashcards/references/styling-rules.md
+  - .agents/skills/german-schreiben-flashcards/scripts/__init__.py
+  - .agents/skills/german-schreiben-flashcards/scripts/diff.py
+  - .agents/skills/german-schreiben-flashcards/scripts/validate_cards.py
+  deployed_file_hashes:
+    .agents/skills/german-schreiben-flashcards/SKILL.md: sha256:a0a53e142f62e8fd7db441d452a8fe8c978e2e9ac86b3bab55fd1a6fd0578ec7
+    .agents/skills/german-schreiben-flashcards/references/styling-rules.md: sha256:e99a1302ebb75a147094c1999cc77e07e2a430e859c2b316af87c9e51bbc1034
+    .agents/skills/german-schreiben-flashcards/scripts/__init__.py: sha256:75924ea96eedb3fc71ea866b0853dc99def0902ee45796fbee961c7ee9c5c79f
+    .agents/skills/german-schreiben-flashcards/scripts/diff.py: sha256:447ae0693fbb4ae53057ea6bc714aec79f2d9ae19d4a08243e07d5e79cec45bf
+    .agents/skills/german-schreiben-flashcards/scripts/validate_cards.py: sha256:8709132d89f9aef5383d812886b4a51ace59323eb212d52882ffab5f23869ade
+  content_hash: sha256:99598b1858a5f985c391b90d646bcd898c0e55da4286fad562988e1aacab4d34
+deployments:
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: null
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: sha256:a0a53e142f62e8fd7db441d452a8fe8c978e2e9ac86b3bab55fd1a6fd0578ec7
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards/references/styling-rules.md
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: sha256:e99a1302ebb75a147094c1999cc77e07e2a430e859c2b316af87c9e51bbc1034
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards/scripts/__init__.py
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: sha256:75924ea96eedb3fc71ea866b0853dc99def0902ee45796fbee961c7ee9c5c79f
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards/scripts/diff.py
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: sha256:447ae0693fbb4ae53057ea6bc714aec79f2d9ae19d4a08243e07d5e79cec45bf
+- kind: project-relative
+  target: antigravity
+  value: .agents/skills/german-schreiben-flashcards/scripts/validate_cards.py
+  runtime: null
+  scope: project
+  owners:
+  - ktfish/german-schreiben-flashcards
+  active_owner: ktfish/german-schreiben-flashcards
+  content_hash: sha256:8709132d89f9aef5383d812886b4a51ace59323eb212d52882ffab5f23869ade
